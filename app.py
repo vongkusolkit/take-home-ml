@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 app = Flask(__name__)
 
 
-@app.route('/points', methods=['POST'])
+@app.route('/points', methods=['GET'])
 def get_points():
     """
     A method to calculates pixel coordinate values for an image
@@ -43,7 +43,7 @@ def get_points():
     return get_points_helper(corner_points, dimensions)
 
 
-@app.route('/plot', methods=['POST'])
+@app.route('/plot', methods=['GET'])
 def plot_points():
     """
     A method to calculates pixel coordinate values for an image
